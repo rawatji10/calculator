@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: consolas;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #edf1f4;
+}
+
+.dark {
+  background: #282c2f;
+}
+.dark #heading h1 {
+  color: #eee;
+  text-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.25), -0.5rem -0.5rem 1rem rgba(255, 255, 255, 0.25);
+}
+.dark .calculator {
+  background: #33393e;
+  box-shadow: 1.5rem 1.5rem 2rem rgba(0, 0, 0, 0.25), -1.5rem -1.5rem 2rem rgba(255, 255, 255, 0.1);
+}
+.dark .calculator .buttons #value {
+  color: #eee;
+  box-shadow: inset 1.5rem 1.5rem 2rem rgba(0, 0, 0, 0.25), inset -1.5rem -1.5rem 2rem rgba(255, 255, 255, 0.1);
+}
+.dark .calculator .buttons span {
+  color: #eee;
+  border: 0.2rem solid #333;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.25), -0.5rem -0.5rem 1rem rgba(255, 255, 255, 0.1);
+}
+.dark .calculator .buttons span:active {
+  box-shadow: inset 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.25), inset -0.5rem -0.5rem 1rem rgba(255, 255, 255, 0.1);
+}
+.dark .calculator .buttons span#clear, .dark .calculator .buttons span #plus, .dark .calculator .buttons span #equal {
+  border: 0.2rem solid #333;
+}
+.dark .calculator .buttons span#clear:active, .dark .calculator .buttons span #plus:active, .dark .calculator .buttons span #equal:active {
+  box-shadow: inset 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.dark .toggelBtn {
+  background: #edf1f4;
+  border: 0.2rem solid #333;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.25), -0.5rem -0.5rem 1rem rgba(255, 255, 255, 0.25);
+}
+
+#heading h1 {
+  color: #333;
+  position: absolute;
+  top: 0;
+  left: 36%;
+  font-size: 7rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.25), -0.5rem -0.5rem 1rem rgba(255, 255, 255, 0.25);
+}
+
+.calculator {
+  position: relative;
+  width: 34rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 1.5rem 1.5rem 2rem rgba(0, 0, 0, 0.1), -1.5rem -1.5rem 2rem rgba(255, 255, 255, 0.7333333333);
+}
+.calculator .buttons {
+  position: relative;
+  display: grid;
+}
+.calculator .buttons #value {
+  position: relative;
+  grid-column: span 4;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  overflow: none;
+  width: 100%;
+  text-align: end;
+  color: #5166d6;
+  height: 10rem;
+  line-height: 10rem;
+  box-shadow: inset 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1), inset -0.5rem -0.5rem 2rem #fff;
+  border-radius: 1rem;
+  margin-bottom: 1.2rem;
+  padding: 0 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.calculator .buttons span {
+  position: relative;
+  padding: 1rem;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1), -0.5rem -0.5rem 2rem #fff;
+  margin: 1rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  min-width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #666;
+  border: 0.2rem solid #edf1f4;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1), -0.5rem -0.5rem 1rem #fff;
+}
+.calculator .buttons span:active {
+  box-shadow: inset 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1), inset -0.5rem -0.5rem 1rem #fff;
+  color: #f44336;
+}
+.calculator .buttons span#clear {
+  grid-column: span 2;
+  background: #f44336;
+  color: #fff;
+  border: 0.2rem solid #edf1f4;
+}
+.calculator .buttons span#plus {
+  grid-row: span 2;
+  background: #31a935;
+  color: #fff;
+  border: 0.2rem solid #edf1f4;
+}
+.calculator .buttons span#equal {
+  grid-row: span 2;
+  background: #2196f3;
+  color: #fff;
+  border: 0.2rem solid #edf1f4;
+}
+.calculator .buttons span#clear:active, .calculator .buttons span#plus:active, .calculator .buttons span#equal:active {
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1), -0.5rem -0.5rem 1rem #fff, inset 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.toggelBtn {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #555;
+  cursor: pointer;
+  border: 0.2rem solid #edf1f4;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1), -0.5rem -0.5rem 1rem #fff;
+}/*# sourceMappingURL=style.css.map */
